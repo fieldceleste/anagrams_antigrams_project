@@ -15,4 +15,8 @@ describe ('Anagram') do
     anagram = Anagram.new("salad", "salads")
     expect(anagram.is_anagram).to(eq("These words are not anagrams."))
   end
+  it ("should return an anagram even if there are special characters") do
+    anagram = Anagram.new("cats.", "acts!")
+    expect(anagram.is_anagram).to(eq("These words are anagrams."))
+  end
 end 

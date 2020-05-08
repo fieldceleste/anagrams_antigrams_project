@@ -5,8 +5,8 @@ class Anagram
 attr_accessor(:user_word1,:user_word2)
 
   def initialize(user_word1, user_word2)
-      @user_word1 = user_word1.downcase.gsub(/[!?&%.,']/,"")
-      @user_word2 = user_word2.downcase.gsub(/[!?&%.,']/,"")
+      @user_word1 = user_word1.downcase.gsub(/[!?&%.,']/, "")
+      @user_word2 = user_word2.downcase.gsub(/[!?&%.,']/, "")
   end
 
   def is_anagram
