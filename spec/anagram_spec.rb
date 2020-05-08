@@ -15,8 +15,14 @@ describe ('Anagram') do
     anagram = Anagram.new("salad", "salads")
     expect(anagram.is_anagram).to(eq("These words are not anagrams."))
   end
-  it ("should return an anagram even if there are special characters") do
+  it ("should return an anagram even if there are special characters in both words") do
     anagram = Anagram.new("cats.", "acts!")
     expect(anagram.is_anagram).to(eq("These words are anagrams."))
+  end
+end
+  describe('Anagram#vowels') do
+  it ("should return true if the words contain vowels") do 
+    anagram = Anagram.new("pat", "tap")
+    expect(anagram.vowels).to(eq("These words are anagrams."))
   end
 end 

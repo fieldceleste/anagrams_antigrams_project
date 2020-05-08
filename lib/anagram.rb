@@ -15,9 +15,16 @@ attr_accessor(:user_word1,:user_word2)
    if (@user_word1.length == @user_word2.length) & (@user_word1 == @user_word2)
     "These words are anagrams."
    else
-     "These words are not anagrams."
-   
+    "These words are not anagrams."
    end
   end
+
+  def vowels
+ if  @user_word1.include?("aeiouy") == 0 || @user_word2.include?("aeiouy") == 0
+  "You need to input actual words!"
+ else 
+  "These words are anagrams."
+  end
+ end
 end
 
