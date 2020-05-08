@@ -31,12 +31,11 @@ _No known bugs at this time_
 
 |Behavior|Input|Output|
 | :-----|:-----|:-----|
-| User should be able to enter a word.| hello | hello |
-| User should be able to enter two words. | hello, goodbye | hello, goodbye |
+| User should be able to enter a word as a string.| "hello" | "hello" | √
+| User should be able to enter two words as strings. | "hello", "goodbye" | "hello", "goodbye" | √
+| System should check if the inputs are words that contain vowels.| pat | true | 
 | System should check if the two words are anagrams. | evil, vile | "These words are anagrams" | 
 | System should account for different cases, but still allow anagrams.| Pat | Tap | 
-| System should check if the inputs are words.| pat | apt | 
-| System should check if the inputs contain vowels. | apt | "You need to input actual words!" |
 | System should check if phrases aren't anagram, and make sure they are actually "antigrams"  | hi, bye  | "These words have no letter matches and are antigrams."|
 | System should check for multiple words being anagrams or "antigrams"| tea, eat, apt| "These words are anagrams", "You need to input actual words!" |
 
