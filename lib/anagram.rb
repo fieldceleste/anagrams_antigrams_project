@@ -5,8 +5,8 @@ class Anagram
 attr_accessor(:user_word1,:user_word2)
 
   def initialize(user_word1, user_word2)
-      @user_word1 = user_word1.downcase.gsub(/[!?&%.,']/, "")
-      @user_word2 = user_word2.downcase.gsub(/[!?&%.,']/, "")
+      @user_word1 = user_word1.downcase.gsub(/[!?&%.,'^]/, "")
+      @user_word2 = user_word2.downcase.gsub(/[!?&%.,'^]/, "")
   end
 
   def is_anagram
@@ -19,12 +19,12 @@ attr_accessor(:user_word1,:user_word2)
    end
   end
 
-  def vowels
- if  @user_word1.include?("aeiouy") == 0 || @user_word2.include?("aeiouy") == 0
-  "You need to input actual words!"
- else 
-  "These words are anagrams."
-  end
- end
+#   def vowels
+#   if @user_word1.tr('aeiouAEIOU','').size == 0 || @user_word2.tr('aeiouAEIOU','').size == 0 
+#   "You need to input actual words!"
+#  else
+#   "These words are anagrams."
+#   end
+#  end
 end
 

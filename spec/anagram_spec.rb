@@ -19,10 +19,18 @@ describe ('Anagram') do
     anagram = Anagram.new("cats.", "acts!")
     expect(anagram.is_anagram).to(eq("These words are anagrams."))
   end
-end
-  describe('Anagram#vowels') do
-  it ("should return true if the words contain vowels") do 
-    anagram = Anagram.new("pat", "tap")
-    expect(anagram.vowels).to(eq("These words are anagrams."))
+  it ("should account for words even if they are different cases") do
+    anagram = Anagram.new("EVIL", "live")
+    expect(anagram.is_anagram).to(eq("These words are anagrams."))
   end
-end 
+end
+#   describe('Anagram#vowels') do
+#   it ("should return true if the words contain vowels") do 
+#     anagram = Anagram.new("pat", "tap")
+#     expect(anagram.vowels).to(eq("These words are anagrams."))
+#   end
+#   it ("should return false if the words don't contain vowels") do 
+#     anagram = Anagram.new("psst", "tssp")
+#     expect(anagram.vowels).to(eq("You need to input actual words!"))
+#   end
+# end 
