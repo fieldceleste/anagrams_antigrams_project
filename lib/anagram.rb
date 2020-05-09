@@ -10,9 +10,9 @@ attr_accessor(:user_word1,:user_word2)
   end
 
   def is_anagram
-    @user_word1 = user_word1.split("").sort.join
-    @user_word2 = user_word2.split("").sort.join
-   if (@user_word1.length == @user_word2.length) & (@user_word1 == @user_word2)
+    @user_word1 = user_word1.split("").sort.join.strip
+    @user_word2 = user_word2.split("").sort.join.strip
+   if (@user_word1 == @user_word2)
     "These words are anagrams."
    else
     "These words are not anagrams."
@@ -29,9 +29,12 @@ attr_accessor(:user_word1,:user_word2)
 
   def is_antigram
   if (@user_word1 != @user_word2)  
-   "These are antigrams."
+    "These words have no letter matches and are antigrams."
 
    end
   end
 end
 
+
+
+# (@user_word1.length == @user_word2.length) &

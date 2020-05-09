@@ -2,7 +2,7 @@ require('rspec')
 require('pry')
 require('anagram')
 
-describe ('Anagram') do 
+describe ('Anagram#is_anagram') do 
   # it ("returns an inputted word") do 
   #   anagram = Anagram.new("hello")
   #   expect(anagram.user_word1).to(eq("hello"))
@@ -45,6 +45,12 @@ end
 describe('Anagram#is_antigram') do
   it ("should return false if both letters do not match") do 
     anagram = Anagram.new("dog", "cat")
-    expect(anagram.is_antigram).to(eq("These are antigrams."))
+    expect(anagram.is_antigram).to(eq("These words have no letter matches and are antigrams."))
   end
+end
+describe ('Anagram#is_anagram') do 
+it ("should return true if inputted phrase is an anagram") do
+  anagram = Anagram.new("Justin Timberlake", "I'm a jerk but listen")
+  expect(anagram.is_anagram).to(eq("These words are anagrams."))
+ end
 end
