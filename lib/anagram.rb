@@ -20,11 +20,18 @@ attr_accessor(:user_word1,:user_word2)
   end
 
   def vowels
-  if @user_word1.scan(/[aeiouy]/).count == 0 || @user_word2.scan(/[aeiouy]/).count == 0
+  if @user_word1.scan(/[aeiouyAEIOUY]/).count == 0 || @user_word2.scan(/[aeiouyAEIOUY]/).count == 0
   "You need to input actual words!"
   else
-  "These words are anagrams."
+  "These are actual words"
   end
  end
+
+  def is_antigram
+  if (@user_word1 != @user_word2)  
+   "These are antigrams."
+
+   end
+  end
 end
 
