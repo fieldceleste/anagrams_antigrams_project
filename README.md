@@ -32,12 +32,19 @@ _No known bugs at this time_
 |Behavior|Input|Output|
 | :-----|:-----|:-----|
 | User should be able to enter a word as a string.| "hello" | "hello" | √
-| User should be able to enter two words as strings. | "hello", "goodbye" | "hello", "goodbye" | √
-| System should check if the inputs are words that contain vowels.| pat | true | 
-| System should check if the two words are anagrams. | evil, vile | "These words are anagrams" | 
-| System should account for different cases, but still allow anagrams.| Pat | Tap | 
-| System should check if phrases aren't anagram, and make sure they are actually "antigrams"  | hi, bye  | "These words have no letter matches and are antigrams."|
-| System should check for multiple words being anagrams or "antigrams"| tea, eat, apt| "These words are anagrams", "You need to input actual words!" |
+| Should return true if inputted words are both equal in length. | "evil", "live" | true | √
+| Should return false if inputted words are not equal in length. | "dog", "doggies" | true | √
+| Should return an anagram even if there are special characters in both words. | "cats.", "acts!" | "These words are anagrams"| √
+| Should account for words even if they are different cases| "EVIL", "live" | "These words are anagrams."| √
+| Should check to see if two words are anagrams | "evil", "live" | "These words are anagrams."|√
+| Should check to see if two words are not anagrams| "cats", "bats"| "These words are not anagrams."|√
+| Should return true if the words contain vowels| "pat", "tap"| "These are actual words"|√
+| Should return false if the words don't contain vowels| "psst", "tssp"| "You need to input actual words!"|√
+| Should return false if both letters do not match| "dog", "cat"| "These words have no letter matches and are antigrams."|√
+| Should return true if inputted phrase is an anagram| "Justin Timberlake", "I'm a jerk but listen"| "These words are anagrams."|√
+| Should return false if inputted phrase is not an anagram| "Lets go to Greece", "It's all greek to me"| "These words are not anagrams."|√
+
+
 
 
 

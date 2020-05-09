@@ -34,7 +34,3 @@ attr_accessor(:user_word1,:user_word2)
    end
   end
 end
-
-
-
-# (@user_word1.length == @user_word2.length) &
