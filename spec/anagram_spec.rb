@@ -27,6 +27,10 @@ describe ('Anagram') do
     anagram = Anagram.new("evil", "live")
     expect(anagram.is_anagram).to(eq("These words are anagrams."))
   end
+  it ("should check to see if two words are not anagrams") do
+    anagram = Anagram.new("cats", "bats")
+    expect(anagram.is_anagram).to(eq("These words are not anagrams."))
+  end
 end
 #   describe('Anagram#vowels') do
 #   it ("should return true if the words contain vowels") do 
