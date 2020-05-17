@@ -38,14 +38,12 @@ _No known bugs at this time_
 | Should account for words even if they are different cases| "EVIL", "live" | "These words are anagrams."| √
 | Should check to see if two words are anagrams | "evil", "live" | "These words are anagrams."|√
 | Should check to see if two words are not anagrams| "cats", "bats"| "These words are not anagrams."|√
+| Should check to see if two words are antigrams, if not anagrams | "pet" , "fly"| √
 | Should return true if the words contain vowels| "pat", "tap"| "These are actual words"|√
 | Should return false if the words don't contain vowels| "psst", "tssp"| "You need to input actual words!"|√
 | Should return false if both letters do not match| "dog", "cat"| "These words have no letter matches and are antigrams."|√
 | Should return true if inputted phrase is an anagram| "Justin Timberlake", "I'm a jerk but listen"| "These words are anagrams."|√
 | Should return false if inputted phrase is not an anagram| "Lets go to Greece", "It's all greek to me"| "These words are not anagrams."|√
-
-
-
 
 
 ## Legal

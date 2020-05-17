@@ -2,7 +2,7 @@ require('rspec')
 require('pry')
 require('anagram')
 
-describe ('Anagram#is_anagram') do 
+describe('Anagram#is_anagram') do 
   it ("should return true if inputted words are both equal in length ") do
     anagram = Anagram.new("evil", "live")
     expect(anagram.is_anagram).to(eq("These words are anagrams."))
@@ -28,6 +28,7 @@ describe ('Anagram#is_anagram') do
     expect(anagram.is_anagram).to(eq("These words are not anagrams."))
   end
 end
+
   describe('Anagram#vowels') do
   it ("should return true if the words contain vowels") do 
     anagram = Anagram.new("pat", "tap")
@@ -38,19 +39,19 @@ end
     expect(anagram.vowels).to(eq("You need to input actual words!"))
   end
 end 
-describe('Anagram#is_antigram') do
-  it ("should return false if both letters do not match") do 
+  describe('#is_antigram') do
+    it ("Should check to see if two words are antigrams, if not anagrams") do 
     anagram = Anagram.new("dog", "cat")
     expect(anagram.is_antigram).to(eq("These words have no letter matches and are antigrams."))
   end
 end
-describe ('Anagram#is_anagram') do 
-it ("should return true if inputted phrase is an anagram") do
+   describe('Anagram#is_anagram') do 
+     it ("should return true if inputted phrase is an anagram") do
   anagram = Anagram.new("Justin Timberlake", "I'm a jerk but listen")
   expect(anagram.is_anagram).to(eq("These words are anagrams."))
  end
- it ("should return false if inputted phrase is not an anagram") do
+     it ("should return false if inputted phrase is not an anagram") do
   anagram = Anagram.new("Lets go to Greece", "It's all greek to me")
   expect(anagram.is_anagram).to(eq("These words are not anagrams."))
- end
+  end
 end
